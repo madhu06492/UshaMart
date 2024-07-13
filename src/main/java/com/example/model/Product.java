@@ -12,21 +12,21 @@ import java.util.List;
 public class Product {
     @Id
     @GeneratedValue
-    @Column(name = "productId")
+    @Column(name = "id")
     private long id;
-    @Column(name = "productName")
+    @Column(name = "name")
     private String name;
-    @Column(name = "productMrp")
+    @Column(name = "mrp")
     private double mrp;
-    @Column(name = "productSaleRate")
+    @Column(name = "saleRate")
     private double saleRate;
-    @Column(name = "productDiscount")
+    @Column(name = "discount")
     private double discount;
-    @Column(name = "productQuantity")
+    @Column(name = "quantity")
     private String quantity;
-    @Column(name = "productDescription")
+    @Column(name = "description")
     private String description;
-    @Column(name = "productImage")
+    @Column(name = "images")
     private List<String> images;
 
 

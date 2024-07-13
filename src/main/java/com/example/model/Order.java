@@ -6,7 +6,6 @@ import lombok.*;
 
 import java.util.Date;
 import java.util.List;
-
 @Entity
 @Table(name="order")
 @Data
@@ -17,23 +16,25 @@ import java.util.List;
 public class Order {
     @Id
     @GeneratedValue
-    @Column(name="orderId")
+    @Column(name="id")
     private long id;
-    @Column(name="orderDate")
+    @Column(name="date")
     private Date date;
-    @Column(name="orderAmount")
+    @Column(name="amount")
     private Double amount;
-    @Column(name="orderIsPaid")
+    @Column(name="isPaid")
     private boolean isPaid;
-    @Column(name="orderProducts")
+    @Column(name="products")
     private List<Product> products;
-    @Column(name="orderUser")
-
-    //change String to User data type
+    @Column(name="user")
+    //TODO :change String to User data type
     private String user;
-    //Change to  String to Address data type
+    //TODO: Change   String to UserAddress data type
+    @Column(name="userAddress")
+    private String userAddress;
+    //TODO: change  string to orderAddress data type
     @Column(name="orderAddress")
-    private String address;
+    private String orderAddress;
 
 
 
