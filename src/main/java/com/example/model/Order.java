@@ -1,13 +1,13 @@
 package com.example.model;
 
-
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
 import java.util.List;
+
 @Entity
-@Table(name="order")
+@Table(name = "order")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,32 +16,23 @@ import java.util.List;
 public class Order {
     @Id
     @GeneratedValue
-    @Column(name="id")
+    @Column(name = "id")
     private long id;
-    @Column(name="date")
+    @Column(name = "date")
     private Date date;
-    @Column(name="amount")
+    @Column(name = "amount")
     private Double amount;
-    @Column(name="isPaid")
+    @Column(name = "isPaid")
     private boolean isPaid;
-    @Column(name="products")
+    @Column(name = "products")
     private List<Product> products;
-    @Column(name="user")
+    @Column(name = "user")
     //TODO :change String to User data type
     private String user;
     //TODO: Change   String to UserAddress data type
-    @Column(name="userAddress")
+    @Column(name = "userAddress")
     private String userAddress;
     //TODO: change  string to orderAddress data type
-    @Column(name="orderAddress")
+    @Column(name = "orderAddress")
     private String orderAddress;
-
-
-
-
-
-
-
-
-
 }
