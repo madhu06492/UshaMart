@@ -33,6 +33,6 @@ public class Order {
     @Column(name = "userAddress")
     private String userAddress;
     //TODO: change  string to orderAddress data type
-    @Column(name = "orderAddress")
-    private String orderAddress;
+    @Column(name = "martAddress")
+    private String martAddress;
 }
