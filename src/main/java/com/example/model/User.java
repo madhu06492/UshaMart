@@ -27,7 +27,7 @@ public class User {
     @Column(name = "phoneNumber")
     private String phoneNumber;
     @Column(name = "address")
-    public Address addsess;
+    public Address address;
     @Column(name = "points")
     private int points;
     @Column(name = "credit")
@@ -42,7 +42,7 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
-        this.addsess = addsess;
+        this.address = addsess;
         this.points = points;
         this.credit = credit;
         this.order = order;
@@ -56,7 +56,7 @@ public class User {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", addsess=" + addsess +
+                ", addsess=" + address +
                 ", points=" + points +
                 ", credit=" + credit +
                 ", order=" + order +
