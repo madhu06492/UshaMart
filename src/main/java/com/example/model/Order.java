@@ -27,12 +27,11 @@ public class Order {
     @Column(name = "products")
     private List<Product> products;
     @Column(name = "user")
-    //TODO :change String to User data type
-    private String user;
+    private User user;
     //TODO: Change   String to UserAddress data type
     @Column(name = "userAddress")
-    private String userAddress;
+    private Address userAddress;
     //TODO: change  string to orderAddress data type
     @Column(name = "martAddress")
-    private String martAddress;
+    private Address martAddress;
 }
