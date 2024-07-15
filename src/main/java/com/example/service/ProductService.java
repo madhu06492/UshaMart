@@ -7,8 +7,12 @@ import java.util.Optional;
 
 public interface ProductService {
     public List<Product> getAllProducts();
+
     public Product getProduct(long id);
+
     public void createProduct(Product product);
+
     public Product updateProduct(Product product);
+
     public void deleteProduct(long id);
 }

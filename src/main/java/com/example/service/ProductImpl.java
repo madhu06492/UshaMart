@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.Optional;
 
-public class ProductImpl implements ProductService{
+public class ProductImpl implements ProductService {
     @Autowired
     private ProductRepo productRepo;
 
@@ -34,7 +34,7 @@ public class ProductImpl implements ProductService{
 
     @Override
     public void deleteProduct(long id) {
-       Product delete= productRepo.findById(id).get();
+        Product delete = productRepo.findById(id).get();
         productRepo.delete(delete);
     }
 }
