@@ -7,7 +7,7 @@ import java.util.List;
 public interface MartService {
     public void createMart(Mart mart);
 
-    public List<Mart> getAllMarts();
+    public List<Mart> getMarts();
 
     public Mart getMart(long id);
 

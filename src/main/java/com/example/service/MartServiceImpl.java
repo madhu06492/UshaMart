@@ -18,7 +18,7 @@ public class MartServiceImpl implements MartService {
     }
 
     @Override
-    public List<Mart> getAllMarts() {
+    public List<Mart> getMarts() {
         return martRepo.findAll();
     }
 

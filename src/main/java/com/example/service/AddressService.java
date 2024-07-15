@@ -12,7 +12,7 @@ public interface AddressService {
 
     public void createAddress(Address address);
 
-    public void updateeAddress(Address address);
+    public void updateAddress(Address address);
 
     public void deleteAddress(long id);
 }
