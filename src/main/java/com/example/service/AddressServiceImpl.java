@@ -29,7 +29,7 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
-    public void updateeAddress(Address address) {
+    public void updateAddress(Address address) {
         addressRepo.save(address);
     }
 

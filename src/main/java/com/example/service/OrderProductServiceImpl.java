@@ -18,7 +18,7 @@ public class OrderProductServiceImpl implements OrderProductService {
     }
 
     @Override
-    public List<OrderProduct> getAllOrderProducts() {
+    public List<OrderProduct> getOrderProducts() {
         return OrderProductRepo.findAll();
     }
 

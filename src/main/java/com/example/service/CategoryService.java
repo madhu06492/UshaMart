@@ -5,7 +5,7 @@ import com.example.model.Category;
 import java.util.List;
 
 public interface CategoryService {
-    public List<Category> getAllCategories();
+    public List<Category> getCategories();
 
     public Category getCategory(long id);
 

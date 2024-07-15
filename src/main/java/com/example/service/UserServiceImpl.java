@@ -12,7 +12,7 @@ public class UserServiceImpl implements UserService {
     private UserRepo userRepo;
 
     @Override
-    public List<User> getAllUsers() {
+    public List<User> getUsers() {
         return userRepo.findAll();
     }
 
