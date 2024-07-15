@@ -13,7 +13,7 @@ public class CategoryServiceImpl implements CategoryService {
     private CategoryRepo categoryRepo;
 
     @Override
-    public List<Category> getAllCategories() {
+    public List<Category> getCategories() {
         return categoryRepo.findAll();
     }
 
