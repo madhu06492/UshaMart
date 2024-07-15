@@ -3,11 +3,12 @@ package com.example.service;
 import com.example.model.Product;
 import com.example.repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
-public class ProductImpl implements ProductService {
+@Service
+public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepo productRepo;
 
@@ -18,7 +19,6 @@ public class ProductImpl implements ProductService {
 
     @Override
     public Product getProduct(long id) {
-
         return productRepo.findById(id).get();
     }
 
