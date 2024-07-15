@@ -20,8 +20,8 @@ public class OrderController {
     }
 
     @GetMapping("/order/{orderId}")
-    public Order getOrder(@PathVariable long id){
-      return this.orderService.getOrder(id);
+    public Order getOrder(@PathVariable long orderId){
+      return this.orderService.getOrder(orderId);
     }
 
     @PostMapping("/order")
@@ -35,8 +35,8 @@ public class OrderController {
     }
 
     @DeleteMapping("/order/{orderId}")
-    public void deleteOrder(@PathVariable long id){
-        this.orderService.deleteOrder(id);
+    public void deleteOrder(@PathVariable long  orderId){
+        this.orderService.deleteOrder(orderId);
     }
 
 
