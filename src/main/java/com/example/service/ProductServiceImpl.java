@@ -5,9 +5,8 @@ import com.example.repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
-import java.util.Optional;
 
-public class ProductImpl implements ProductService {
+public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepo productRepo;
 
@@ -18,7 +17,6 @@ public class ProductImpl implements ProductService {
 
     @Override
     public Product getProduct(long id) {
-
         return productRepo.findById(id).get();
     }
 
