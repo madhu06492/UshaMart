@@ -1,7 +1,6 @@
 package com.example.controller;
 
 import com.example.model.Order;
-import com.example.model.Product;
 import com.example.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -38,6 +37,4 @@ public class OrderController {
     public void deleteOrder(@PathVariable long orderId) {
         orderService.deleteOrder(orderId);
     }
-
-
 }
