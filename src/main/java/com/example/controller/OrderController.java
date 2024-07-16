@@ -15,28 +15,28 @@ public class OrderController {
     private OrderService orderService;
 
     @GetMapping("/order")
-    public List<Order> getOrders(){
-        return this.orderService.getOrders();
+    public List<Order> getOrders() {
+        return orderService.getOrders();
     }
 
     @GetMapping("/order/{orderId}")
-    public Order getOrder(@PathVariable long orderId){
-      return this.orderService.getOrder(orderId);
+    public Order getOrder(@PathVariable long orderId) {
+        return orderService.getOrder(orderId);
     }
 
     @PostMapping("/order")
-    public void createOrder(@RequestBody Order order){
-         this.orderService.createOrder(order);
+    public void createOrder(@RequestBody Order order) {
+        orderService.createOrder(order);
     }
 
     @PutMapping("/order")
-    public void updateOrder(@RequestBody Order order){
-        this.orderService.updateOrder(order);
+    public void updateOrder(@RequestBody Order order) {
+        orderService.updateOrder(order);
     }
 
     @DeleteMapping("/order/{orderId}")
-    public void deleteOrder(@PathVariable long  orderId){
-        this.orderService.deleteOrder(orderId);
+    public void deleteOrder(@PathVariable long orderId) {
+        orderService.deleteOrder(orderId);
     }
 
 
