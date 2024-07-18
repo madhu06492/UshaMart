@@ -1,10 +1,9 @@
 package com.example.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.io.Serializable;
 
 @Getter
 @Setter
@@ -13,7 +12,8 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode
 @Entity
-public class OrderProduct {
+@Table(name = "orderProduct")
+public class OrderProduct implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "id")
