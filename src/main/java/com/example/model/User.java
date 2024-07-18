@@ -1,24 +1,23 @@
 package com.example.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.io.Serializable;
 
 @Getter
 @Setter
 @Entity
 @EqualsAndHashCode
 @NoArgsConstructor
-
-public class User {
+@Table(name = "user")
+public class User implements Serializable {
     @Id
     @GeneratedValue
-    @Column(name = "")
+    @Column(name = "id")
     private long id;
     @Column(name = "firstName")
     private String firstName;
@@ -34,7 +33,7 @@ public class User {
     private double credit;
     @Column(name = "order")
     private long order;
-    @Column(name = "imagee")
+    @Column(name = "image")
     private String image;
 
     public User(long id, String firstName, String lastName, String phoneNumber, Address addsess, int points, double credit, long order, String image) {
@@ -56,7 +55,7 @@ public class User {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", addsess=" + address +
+                ", address=" + address +
                 ", points=" + points +
                 ", credit=" + credit +
                 ", order=" + order +
