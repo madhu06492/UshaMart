@@ -1,19 +1,20 @@
 package com.example.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
+import java.io.Serializable;
+
+
 @EqualsAndHashCode
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Category {
+@Entity
+@Table(name="category")
+public class Category implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "id")

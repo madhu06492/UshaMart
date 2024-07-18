@@ -1,16 +1,17 @@
 package com.example.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@Entity
+import java.io.Serializable;
+
+
 @EqualsAndHashCode
 @NoArgsConstructor
-public class Address {
+@Entity
+@Table(name="address")
+public class Address implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "id")

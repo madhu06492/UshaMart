@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.Response;
 import com.example.model.User;
 import com.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +20,21 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public List<User> getUsers() {
-        return userService.getUsers();
+    public Response<List<User>> getUsers() {
+        List<User> list= userService.getUsers();
+        if(list.size()<=0){
+            return new Response(404,"List Customer is Empty",list);
+        }
+        return new Response(200,"Success",list);
     }
 
     @GetMapping("/user/{userId}")
-    public User getUser(@PathVariable long userId) {
-        return userService.getUser(userId);
+    public Response<User> getUser(@PathVariable long userId) {
+        User user = userService.getUser(userId);
+        if(user ==null){
+            return new Response(404,"empty", user);
+        }
+        return new Response(200,"", user);
     }
 
     @PutMapping("/user")

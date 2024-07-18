@@ -3,17 +3,19 @@ package com.example.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-@Entity
-@Table(name = "order")
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class Order {
+@Entity
+@Table(name = "orders")
+public class Order implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "id")
