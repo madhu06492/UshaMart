@@ -24,16 +24,16 @@ public class OtpController {
 
 	private final String Topic_Destination = "/lesson/sms";
 
-	@PostMapping("/phoneNo")
+	@PostMapping("/verifyPhoneNo")
 	public Response<OtpResponse> sendOtp(@RequestBody OtpRequest phoneNo){
 		try {
 			System.out.println(phoneNo.getPhoneNo());
 			service.send(phoneNo);
 		}catch(Exception e) {
-			return new Response<OtpResponse>(500, "something is wrong with number",new OtpResponse("failure") );
+			return new Response<OtpResponse>(500, "failure",new OtpResponse("something is wrong with number") );
 		}
 		webSocket.convertAndSend(Topic_Destination,getTimeStamp()+": sms has been sent"+ phoneNo.getPhoneNo());
-		return new Response<OtpResponse>(200, "OTP is successfully send",new OtpResponse("success"));
+		return new Response<OtpResponse>(200, "success",new OtpResponse("OTP is successfully send"));
 	}
 
 	/*

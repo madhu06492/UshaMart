@@ -14,11 +14,11 @@ import com.twilio.type.PhoneNumber;
 @Component
 public class SmsService {
 	
-	private final String Account_SID="AC52c772e453d4e50488c6d8c06f0f3f45";
+	private final String Account_SID="AC59b72df32afb2981abea208751d0ed2f";
 	
-	private final String Auth_Token="75186e77967f225b80c31616ba23b532";
+	private final String Auth_Token="172bd30adfbd687b96c6b8c83e1455a1";
 	
-	private final String Twilio_phone_number="+14847397994";
+	private final String Twilio_phone_number="+16612634841";
 	
 	public void send(OtpRequest sms) throws ParseException{
 		Twilio.init(Account_SID,Auth_Token);
@@ -26,7 +26,7 @@ public class SmsService {
 		int max=999999;
 		int number=(int)(Math.random()*(max-min+1)+min);
 		
-		String msg="Your OTP is"+number+".";
+		String msg="Your OTP is "+number+".";
 		Message message=Message.creator(new PhoneNumber(sms.getPhoneNo()), new  PhoneNumber(Twilio_phone_number), msg).create();
 		StoreOTP.setOtp(number);
 		

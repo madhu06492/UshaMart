@@ -12,14 +12,14 @@ import com.example.model.TempOtp;
 @RestController
 public class VerifyOTPController {
 	
-	@PostMapping("/otp")
+	@PostMapping("/verifyOtp")
 	public Response<OtpVerificationResponse> verifyOTP(@RequestBody TempOtp sms) {
 		
 		if(sms.getOtp()==StoreOTP.getOtp()) {
 			
-			return new Response<OtpVerificationResponse>(200,"OTP is correct",new OtpVerificationResponse(true,"validOTP") );
+			return new Response<OtpVerificationResponse>(200,"success",new OtpVerificationResponse("verification successful") );
 		}else {
-			return new Response<OtpVerificationResponse>(500,"OTP is incorrect",new OtpVerificationResponse(false,"invalidOTP") );	
+			return new Response<OtpVerificationResponse>(500,"failure",new OtpVerificationResponse("verification failed") );
 		}
 		
 	}
